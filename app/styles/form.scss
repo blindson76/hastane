@@ -1,0 +1,196 @@
+/* Form */
+
+.formItemSingle:not(:first-child){margin-top:$space}
+.formItemSingle em{font:normal 400 13px 'Poppins';color:#646c9a;margin-bottom:4px;display:block}
+
+.formItemInput{display:flex;flex-wrap:wrap;position:relative}
+.formItemInput > span{background:#f7f8fa;width:44px;position:absolute;top:0px;left:0px;bottom:0px;display:flex;align-items:center;justify-content:center;border:1px solid $inputBorderColor;border-right:none}
+.formItemInput span i, .formItemInput span svg{color:#74788d;font-size:15px}
+.formItemInput input{background:#fff;border:1px solid $inputBorderColor;padding:9px;padding-left:53px;font:normal 400 13px 'Poppins';color:#495057;width:100%}
+.formItemInput input[disabled]{background:#f8f8f8}
+.formItemInput u{display:block;width:1px;position:absolute;top:1px;bottom:1px;left:44px;background:$inputBorderColor}
+.formItemInput input:focus{border-color:#669cf7}
+.formItemInput input:focus + u{background:#669cf7}
+
+.formItemError{font:normal 400 11px 'Poppins';color:#fd397a;display:block;margin-top:2px}
+
+.formItemInputError input, .formItemInputError input:focus{border-color:#fd397a}
+.formItemInputError u, .formItemInputError input:focus + u{background:#fd397a}
+
+.formItemFlex{display:flex}
+.formItemFlex .formItemSingle{margin-top:$space;flex:1}
+.formItemFlex .formItemSingle:not(:first-child){margin-left:$space}
+
+.formItemFlex:first-child .formItemSingle{margin-top:0px}
+
+.formItemSubTitle{margin-top:calc( #{$space} * 2 );font:normal 500 16px 'Poppins';color:$colorBlack}
+
+/* Form Input Radio */
+
+.formInputRadio{background:#fff;display:flex;height:40px}
+.formInputRadio label{display:flex;margin-bottom:0px;flex:1;align-items:center;border:1px solid $inputBorderColor;transition:all 0.3s;cursor:pointer}
+.formInputRadio label:not(:first-child){margin-left:2px}
+
+.radioBox{width:44px;background:#f7f8fa;height:38px;margin-right:9px;border-right:1px solid $inputBorderColor;display:flex;align-items:center;justify-content:center}
+.radioBoxRadio{width:24px;height:24px;background:#fff;border:1px solid $inputBorderColor;border-radius:24px;display:flex;align-items:center;justify-content:center}
+.radioBoxRadio i, .radioBoxRadio svg{color:#74788d;font-size:15px;transform:scale(2) rotate(24deg);transition:all 0.3s;opacity:0}
+
+.formInputRadio label span, .formInputCheck label span{font:normal 400 13px 'Poppins';color:#495057;transition:all 0.3s;position:relative;top:1px}
+
+.formInputRadio label.active{background:#EAF1FE}
+.formInputRadio label.active span{color:$activeBlue}
+.formInputRadio label.active .radioBox .radioBoxRadio i, .formInputRadio label.active .radioBox .radioBoxRadio svg{transform:scale(1) rotate(0deg);opacity:1}
+
+.formInputRadioCheckError label{background:#FFECF2}
+.formInputRadioCheckError label span{color:#fd397a}
+
+/* Form Input CheckList */
+
+.formInputCheck{background:#fff;display:flex;flex-direction:column}
+.formInputCheck label{display:flex;margin-bottom:0px;flex:1;align-items:center;border:1px solid $inputBorderColor;transition:all 0.3s;cursor:pointer}
+.formInputCheck label:not(:first-child){margin-top:2px}
+
+.formInputCheck .radioBox .radioBoxRadio{border-radius:4px}
+.formInputCheck .radioBox .radioBoxRadio i, .formInputCheck .radioBox .radioBoxRadio svg{position:relative;left:1px}
+
+.formInputCheck label.active{background:#EAF1FE}
+.formInputCheck label.active span{color:$activeBlue}
+.formInputCheck label.active .radioBox .radioBoxRadio i, .formInputCheck label.active .radioBox .radioBoxRadio svg{transform:scale(1) rotate(0deg);opacity:1}
+
+/* Yaşlı Yakınları */
+
+.yasliYakinlariKapsa{background:#f8f8f8;padding:$space;margin-top:$space;transition:all 0.3s}
+.yasliYakinlariBilgi{font:normal 400 11px 'Poppins';color:#646c9a;margin-top:2px}
+
+/* TextArea */
+
+.formItemInput textarea{background:#fff;border:1px solid $inputBorderColor;padding:9px;font:normal 400 13px 'Poppins';color:#495057;width:100%;min-width:100%;min-height:96px}
+.formItemInput textarea:focus{border-color:#669cf7}
+
+.formItemInputError textarea, .formItemInputError textarea:focus{border-color:#fd397a}
+
+/* Date Input */
+
+.formDateInput .karcin-input{margin-bottom:0px;height:40px}
+.formDateInput .react-datepicker-wrapper{width:100%}
+.formDateInput .react-datepicker__input-container{width:100%}
+.formDateInput input.form-control{height:40px;border-radius:0px;margin-left:44px;width:calc(100% - 44px);padding:9px}
+.formDateInput input.form-control:focus{box-shadow:none}
+
+/* Breadcrumb */
+
+.myBreadcrumb{display:flex;flex-wrap:wrap;margin-bottom:calc( #{$space} * 2 );justify-content:center}
+.myBreadcrumbItem{background:#f7f7f7;border-radius:4px;padding:$space;display:flex;flex-direction:column;width:140px;align-items:center;position:relative;transition:background 0.3s}
+.myBreadcrumbItem:not(:first-child){margin-left:calc( #{$space} * 4 )}
+.myBreadcrumbItem em{font:normal 700 40px 'Montserrat';color:#d8d8d8}
+.myBreadcrumbItem span{font:normal 400 13px 'Poppins';color:#9c9c9c;flex:1;display:flex;align-items:center;justify-content:center;text-align:center;margin-top:10px}
+.myBreadcrumbItem + .myBreadcrumbItem:before{content:'';display:block;position:absolute;top:calc( 50% - 5px );left:calc( #{$space} * -4 );background:#f7f7f7;width:calc( #{$space} * 4 );height:10px;transition:background 0.3s}
+
+.myBreadcrumbItem.active, .myBreadcrumbItem.active:before{background:$activeBlue}
+.myBreadcrumbItem.active em, .myBreadcrumbItem.active span{color:#fff}
+
+/* Form Buttons */
+
+.formItemButtons{display:flex;justify-content:space-between;margin-top:$space;padding:$space;position:relative;background:#f9f9f9;border-top:1px solid #ebedf2;margin-left:calc( #{$space} * -1 );width:calc( 100% + ( #{$space} * 2 ) );margin-bottom:calc( #{$space} * -1 )}
+
+.prev{background:#fff;border:1px solid #e2e5ec;padding:8px 24px;cursor:pointer;display:flex;align-items:center}
+.prev span i, .prev span svg{width:auto;font-size:15px;color:#74788d}
+.prev b{color:#595d6e;font:normal 400 13px 'Poppins';margin-left:10px;position:relative;top:2px}
+.prev:hover{background:#f4f5f8}
+
+.next{background:#5867dd;border:1px solid #5867dd;padding:8px 24px;cursor:pointer;display:flex;align-items:center;margin-left:auto}
+.next span{order:2}
+.next span i, .next span svg{width:auto;font-size:15px;color:#e9e9e9}
+.next b{color:#fff;font:normal 400 13px 'Poppins';margin-right:10px;position:relative;top:1px;order:1}
+.next:hover{background:$activeBlue}
+
+/*.save{background:#2ecc71;border:1px solid #27ae60;padding:8px 24px;cursor:pointer;display:flex;align-items:center;margin-left:auto}
+.save span i, .save span svg{width:auto;font-size:15px;color:#fff}
+.save b{color:#fff;font:normal 400 13px 'Poppins';margin-left:10px;position:relative;top:1px}
+.save:hover{background:#27ac5f}
+
+.add{background:#5867dd;border:1px solid #5867dd;padding:4px 16px;cursor:pointer;display:flex;align-items:center;margin-top:10px;width:max-content}
+.add span i, .add span svg{width:auto;font-size:15px;color:#fff}
+.add b{color:#fff;font:normal 400 13px 'Poppins';margin-left:10px;position:relative;top:1px}
+.add:hover{background:#384ad7;border-color:#2e40d4}
+
+.delete{background:#e74c3c;border:1px solid #c0392b;padding:4px 16px;cursor:pointer;display:flex;align-items:center;margin-top:$space;width:max-content}
+.delete span i, .delete span svg{width:auto;font-size:15px;color:#fff}
+.delete b{color:#fff;font:normal 400 13px 'Poppins';margin-left:10px;position:relative;top:1px}
+.delete:hover{background:#c0392b}
+
+.normalButton{background:#5867dd;border:1px solid #5867dd;padding:8px 24px;cursor:pointer;display:flex;align-items:center;width:max-content;margin-top:$space}
+.normalButton span i, .normalButton span svg{width:auto;font-size:13px;color:#e9e9e9;position:relative;top:-1px}
+.normalButton b{color:#fff;font:normal 400 14px 'Poppins';margin-left:10px;position:relative;top:1px}
+.normalButton:hover{background:$activeBlue}
+
+.buttonFlex{display:flex}
+
+.normalButtonPrint{background:#1abc9c;border:1px solid #16a085;padding:8px 24px;cursor:pointer;display:flex;align-items:center;width:max-content;margin-top:$space;margin-left:10px}
+.normalButtonPrint span i, .normalButtonPrint span svg{width:auto;font-size:13px;color:#e9e9e9;position:relative;top:-1px}
+.normalButtonPrint b{color:#fff;font:normal 400 14px 'Poppins';margin-left:10px;position:relative;top:1px}
+.normalButtonPrint:hover{background:#14a286}
+
+.normalButtonYesil{background:#2ecc71;border:1px solid #27ae60;padding:8px 24px;cursor:pointer;display:flex;align-items:center;width:max-content;margin-top:$space}
+.normalButtonYesil span i, .normalButtonYesil span svg{width:auto;font-size:13px;color:#e9e9e9;position:relative;top:-1px}
+.normalButtonYesil b{color:#fff;font:normal 400 14px 'Poppins';margin-left:10px;position:relative;top:1px}
+.normalButtonYesil:hover{background:#27ac5f}*/
+
+/* Form Sonu */
+.formEndWrapper{background:rgba(32, 32, 43, 0.88);position:fixed;top:0px;left:0px;width:100%;height:100%;z-index:2;display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s;pointer-events:none}
+.formEndArea{width:490px;box-shadow:0px 0px 14px 0px rgba(44, 103, 205, 0.4);border-radius:4px;overflow:hidden;transition:all 0.3s;transform:scale(0.72)}
+.formEndTitle{background:#f9fafe;padding:$space;font:normal 500 16px 'Poppins';color:$colorBlack;border-bottom:3px solid #e3ebfd}
+.formEndWhite{background:#fff;padding:$space}
+.formEndWhite{font:normal 400 13px 'Poppins';color:$colorBlack}
+.formEndWrapper.active{opacity:1;pointer-events:auto}
+.formEndWrapper.active .formEndArea{transform:scale(1)}
+
+.formEndButtons{display:flex;margin-top:$space}
+.formEndButton{display:flex;flex-direction:column;background:#1abc9c;border:1px solid #16a085;flex:1;padding:14px;align-items:center;transition:all 0.3s;cursor:pointer}
+.formEndButton:not(:first-child){margin-left:$space}
+.formEndButton span i, .formEndButton span svg{width:auto;font-size:24px;color:#fff}
+.formEndButton b{color:#fff;font:normal 400 15px 'Poppins';text-align:center;margin-top:6px}
+.formEndButton:hover{background:#14a286}
+
+/**/
+
+.react-datepicker-picker.day.current.selected{height:auto !important;margin:0px !important}
+.react-datepicker-picker.month.current.selected{height:auto !important;margin:0px !important}
+.react-datepicker-picker.year.current.selected{height:auto !important;margin:0px !important}
+.react-datepicker-component .react-datepicker-input{border-radius:0px;height:40px;background:#fff}
+.react-datepicker-component .react-datepicker-input:hover{background:#fff}
+.react-datepicker-component .react-datepicker-input.is-open{background:#fff}
+
+.formItemInputError .react-datepicker-component .react-datepicker-input{border-color:#fd397a}
+
+.randevuSaatDolu{background:#f8f8f8;margin-top:2px;font:normal 400 13px 'Poppins';color:#999;height:40px;display:flex;align-items:center;padding:0px 9px}
+.formInputRadio label.disabled{background:#f8f8f8;pointer-events:none;opacity:0.42}
+
+/* Mobile */
+
+@media only screen and (max-width:1120px){
+	.myBreadcrumbItem{padding:10px;width:107px}
+	.myBreadcrumbItem:not(:first-child){margin-left:calc( #{$space} * 2 )}
+	.myBreadcrumbItem em{font-size:28px}
+
+	.myBreadcrumbItem + .myBreadcrumbItem:before{left:calc( #{$space} * -2 );width:calc( #{$space} * 2 )}
+}
+
+@media only screen and (max-width:698px){
+	.myBreadcrumb{flex-direction:column}
+	.myBreadcrumbItem{width:100%;align-items:flex-start}
+	.myBreadcrumbItem:not(:first-child){margin-left:0px;margin-top:10px}
+	.myBreadcrumbItem em{font-size:22px}
+	.myBreadcrumbItem span{margin-top:2px;justify-content:flex-start;text-align:left}
+	.myBreadcrumbItem + .myBreadcrumbItem:before{display:none}
+}
+
+@media only screen and (max-width:520px){
+	.formItemFlex{flex-direction:column}
+	.formItemFlex .formItemSingle:not(:first-child){margin-left:0px}
+
+	.formInputRadio{flex-direction:column;height:auto}
+	.formInputRadio label:not(:first-child){margin-left:0px;margin-top:2px}
+
+	.yasliYakinlariKapsa .formItemFlex:first-child .formItemSingle:not(:first-child){margin-top:$space}
+}

@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+
+.bigBlueButton{background:#5867dd;border:1px solid #5867dd;padding:9px 24px;cursor:pointer;display:flex;align-items:center;width:max-content;margin-top:$space}
+.bigBlueButton i, .bigBlueButton svg{width:auto;font-size:14px;color:#fff;position:relative;top:-1px}
+.bigBlueButton .touchableText{color:#fff;font:normal 400 14px 'Poppins';margin-left:10px}
+.bigBlueButton:hover{background:$activeBlue}
+
+.smallBlueButton{background:#5867dd;border:1px solid #5867dd;padding:6px 16px;cursor:pointer;display:flex;align-items:center;margin-top:10px;width:max-content}
+.smallBlueButton i, .smallBlueButton svg{width:auto;font-size:14px;color:#fff}
+.smallBlueButton .touchableText{color:#fff;font:normal 400 13px 'Poppins';margin-left:10px}
+.smallBlueButton:hover{background:#384ad7;border-color:#2e40d4}
+
+.smallRedButton{background:#e74c3c;border:1px solid #c0392b;padding:6px 16px;cursor:pointer;display:flex;align-items:center;margin-top:$space;width:max-content}
+.smallRedButton i, .smallRedButton svg{width:auto;font-size:14px;color:#fff}
+.smallRedButton .touchableText{color:#fff;font:normal 400 13px 'Poppins';margin-left:10px}
+.smallRedButton:hover{background:#c0392b}
+
+.bigGreenButton{background:#2ecc71;border:1px solid #27ae60;padding:9px 24px;cursor:pointer;display:flex;align-items:center;width:max-content}
+.bigGreenButton i, .bigGreenButton svg{width:auto;font-size:15px;color:#fff}
+.bigGreenButton .touchableText{color:#fff;font:normal 400 14px 'Poppins';margin-left:10px}
+.bigGreenButton:hover{background:#27ac5f}
+
+.bigTransButton{background:#f8f8f8;border:1px solid #e8e8e8;padding:9px 24px;cursor:pointer;display:flex;align-items:center;width:max-content}
+.bigTransButton i, .bigTransButton svg{width:auto;font-size:15px;color:#646c9a}
+.bigTransButton .touchableText{color:#646c9a;font:normal 400 14px 'Poppins';margin-left:10px}
+.bigTransButton:hover{background:#fff}
+
+.bigDarkButton{background:#1abc9c;border:1px solid #16a085;padding:9px 24px;cursor:pointer;display:flex;align-items:center;width:max-content;margin-top:$space}
+.bigDarkButton i, .bigDarkButton svg{width:auto;font-size:14px;color:#fff}
+.bigDarkButton .touchableText{color:#fff;font:normal 400 14px 'Poppins';margin-left:10px}
+.bigDarkButton:hover{background:#14a286}
+
+/**/
+
+.animationTouchLeft{opacity:0;pointer-events:none;transition:all 0.3s;transform:scale(0.42);transform-origin:left}
+.animationTouchLeft.active{opacity:1;pointer-events:auto;transform:scale(1)}
+
+/**/
+
+.touchablesFlex{display:flex;align-items:flex-start}
+.touchablesFlex div:not(:first-child){margin-left:10px}

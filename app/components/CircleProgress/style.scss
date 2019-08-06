@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.circleTrans{background:transparent;display:flex;flex-wrap:wrap;min-height:112px}
+
+.circleBeyaz{width:calc( (100% - 60px) / 4 );background:#fff;padding:$space;box-shadow:$shadowWhite;display:flex;align-items:center}
+.circleBeyaz + .circleBeyaz{margin-left:$space}
+
+.circleInfo{flex:1;margin-left:$space}
+.circleTitle{font:normal 500 16px 'Poppins';color:$colorBlack;margin-bottom:2px}
+.circleSubTitle{font:normal 400 13px 'Poppins';color:#b9b9b9}
+
+.circleSVG{position:relative}
+.circleValueText{position:absolute;top:0px;left:0px;background:transparent;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font:normal 500 20px 'Poppins'}
+
+.circleBeyaz.TOPLAM .circleTitle{color:#646c9a}
+.circleBeyaz.TOPLAM .circleSVG .circleValueText{color:#646c9a}
+
+.circleBeyaz.BEKLEMEDE .circleTitle{color:#ffb822}
+.circleBeyaz.BEKLEMEDE .circleSVG .circleValueText{color:#ffb822}
+
+.circleBeyaz.KABUL .circleTitle{color:#0abb87}
+.circleBeyaz.KABUL .circleSVG .circleValueText{color:#0abb87}
+
+.circleBeyaz.IPTAL .circleTitle{color:#fd397a}
+.circleBeyaz.IPTAL .circleSVG .circleValueText{color:#fd397a}

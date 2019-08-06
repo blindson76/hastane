@@ -1,0 +1,102 @@
+@import '../../styles/variables.scss';
+
+.chartWrapper{padding:0px !important;display:flex;flex-direction:column;justify-content:space-between}
+.customTooltip{background:rgba(0,0,0, 0.6);font:normal 400 11px 'Poppins';color:#fff;padding:0px 6px;border-radius:4px}
+
+.chartHeader{margin-bottom:calc( #{$space} * 2 )}
+.chartTitle{font:normal 500 16px 'Poppins';color:$colorBlack;margin:$space;margin-bottom:0px}
+.chartInfo{margin-left:$space;margin-right:$space;margin-top:2px;font:normal 400 13px 'Poppins';color:#646c9a}
+
+/* Chart 2 */
+
+.barChart{margin:0px $space}
+.pieChart{margin-bottom:$space}
+
+/* Başlangıç Alt */
+
+.onGorusmelerWhite{background:#fff;box-shadow:$shadowWhite;margin-top:$space}
+.onGorusmelerTitle{font:normal 500 16px 'Poppins';color:$colorBlack;margin-left:$space;margin-right:$space;padding-top:$space;display:flex;justify-content:space-between;align-items:flex-end}
+
+.bekleyenOnGorusme{display:flex}
+.bekleyenOnGorusme span{font:normal 500 13px 'Poppins';color:#595d6e;padding:16px 0px;border-bottom:1px solid #f0f3ff;position:relative}
+.bekleyenOnGorusme span:nth-child(1){width:210px}
+.bekleyenOnGorusme span:nth-child(2){width:210px}
+.bekleyenOnGorusme span:nth-child(3){width:170px}
+.bekleyenOnGorusme span:nth-child(4){flex:1}
+.bekleyenOnGorusme span:nth-child(5){width:170px}
+.bekleyenOnGorusme span:nth-child(6){width:200px}
+
+.bekleyenOnGorusme span b{font:normal 600 11px 'Poppins';padding:6px 12px;width:92px;text-align:center}
+.bekleyenOnGorusme span b.stateBEKLEMEDE{background:#FFF8EB;color:#ffb822}
+.bekleyenOnGorusme span b.stateIPTAL{background:#FFECF2;color:#fd397a}
+.bekleyenOnGorusme span b.stateKABUL{background:#ECFAF1;color:#0abb87}
+
+.bekleyenOnGorusme:nth-child(1){margin-top:$space}
+.bekleyenOnGorusme:nth-child(1) span{background:#F0F3FF;color:#898ea0}
+.bekleyenOnGorusme span:nth-child(1){padding-left:20px}
+
+.bekleyenOnGorusme span u{background:#fff;display:flex;width:max-content;padding:12px;transition:all 0.3s;cursor:pointer}
+.bekleyenOnGorusme span u i{background:#93a2dd;width:4px;height:4px;display:block;border-radius:4px;transition:all 0.3s}
+.bekleyenOnGorusme span u i:not(:first-child){margin-left:2px}
+
+.bekleyenOnGorusme span u:hover, .bekleyenOnGorusme span u.active{background:#f0f3ff}
+.bekleyenOnGorusme span u:hover i, .bekleyenOnGorusme span u.active i{background:#2c77f4}
+
+.bekleyenOnGorusme span.gorusmeButton{padding:0px;display:flex;align-items:center}
+
+.bekleyenOnGorusme:hover{background:#f9f9f9}
+
+/* Bekleyen Ön Görüşme Açılır */
+
+.onGorusmeAcilir{background:#fff;position:absolute;bottom:12px;left:-172px;z-index:1;width:172px;box-shadow:0px 0px 50px 0px rgba(82,63,105, 0.32);opacity:0;pointer-events:none;transform:translateY(20px);transition:all 0.3s}
+.onGorusmeAcilir.active{transform:translateY(0px);opacity:1;pointer-events:auto}
+
+.onGorusmeAcilir ul{display:flex;flex-direction:column;padding:$space 0px}
+.onGorusmeAcilir ul li a{display:block;display:flex;padding:8px $space;transition:all 0.3s;cursor:pointer}
+
+.onGorusmeAcilirSimge{width:30px;display:flex;align-items:center}
+.onGorusmeAcilirSimge i, .onGorusmeAcilirSimge svg{color:#a2a5b9;font-size:15px;transition:all 0.3s}
+.onGorusmeAcilirYazi{font:normal 400 13px 'Poppins';color:#595d6e;transition:all 0.3s}
+
+.onGorusmeAcilir ul li a:hover{background:#f7f8fa}
+.onGorusmeAcilir ul li a:hover .onGorusmeAcilirYazi, .onGorusmeAcilir ul li a:hover .onGorusmeAcilirSimge i, .onGorusmeAcilir ul li a:hover .onGorusmeAcilirSimge svg{color:#5d78ff}
+
+/* */
+
+.bekleyenOnGorusme .print{display:none}
+
+/* Randevu Tablosu */
+
+.randevuTabloTek{display:flex}
+.randevuTabloTek span{font:normal 500 13px 'Poppins';color:#595d6e;padding:16px 0px;border-bottom:1px solid #f0f3ff;position:relative}
+.randevuTabloTek span:nth-child(1){flex:1}
+.randevuTabloTek span:nth-child(2){width:220px}
+.randevuTabloTek span:nth-child(3){width:200px}
+.randevuTabloTek span:nth-child(4){width:120px}
+.randevuTabloTek span:nth-child(5){width:190px}
+.randevuTabloTek span:nth-child(6){width:180px}
+
+.randevuTabloTek span b{font:normal 600 11px 'Poppins';padding:6px 12px;width:104px;text-align:center}
+.randevuTabloTek span b.stateGun1{background:#ECFAF1;color:#0abb87}
+.randevuTabloTek span b.stateGun2{background:#FFF8EB;color:#ffb822}
+.randevuTabloTek span b.stateGun3{background:#FFECF2;color:#fd397a}
+
+.randevuTabloTek:nth-child(1){margin-top:$space}
+.randevuTabloTek:nth-child(1) span{background:#F0F3FF;color:#898ea0}
+.randevuTabloTek span:nth-child(1){padding-left:20px}
+
+.randevuTabloTek span u{background:#fff;display:flex;width:max-content;padding:12px;transition:all 0.3s;cursor:pointer}
+.randevuTabloTek span u i{background:#93a2dd;width:4px;height:4px;display:block;border-radius:4px;transition:all 0.3s}
+.randevuTabloTek span u i:not(:first-child){margin-left:2px}
+
+.randevuTabloTek span u:hover, .randevuTabloTek span u.active{background:#f0f3ff}
+.randevuTabloTek span u:hover i, .randevuTabloTek span u.active i{background:#2c77f4}
+
+.randevuTabloTek span.gorusmeButton{padding:0px;display:flex;align-items:center}
+
+.randevuTabloTek:hover{background:#f9f9f9}
+
+.randevuAcilir{width:212px}
+
+.titleEnd{color:#646c9a;font:normal 400 13px 'Poppins';cursor:pointer}
+.titleEnd:hover{color:#383e61}

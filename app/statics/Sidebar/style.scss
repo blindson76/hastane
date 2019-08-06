@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.metismenu{position:relative;z-index:2}
+.metismenu-link{display:block;font:normal 400 13px 'Muli';color:#9899ac;padding:10px 30px 10px 50px;position:relative}
+.metismenu-link:hover{background:#2E2E3D;color:#fff}
+.metismenu-link:hover i.metismenu-icon{color:#fff}
+.metismenu-link:hover i.metismenu-state-icon{color:#787892}
+
+i.metismenu-icon{width:30px;color:#9899ac;font-size:15px;position:absolute;top:10px;left:20px}
+i.metismenu-state-icon{transition:transform 0.3s, top 0.1s;position:absolute;top:0px;bottom:0px;font-size:13px;right:$space;display:flex;align-items:center;color:#3a3a5d}
+i.metismenu-state-icon.rotate-minus-90{transform:rotate(-90deg);top:3px}
+
+.metismenu-link.active{background:$activeBlue;color:#fff}
+.metismenu-link.active i.metismenu-icon{color:#fff}
+
+.metismenu-container .metismenu-container{background:#151519}
+
+/* Açılır Kısmı */
+
+.metismenu-container .metismenu-container .metismenu-item > .metismenu-link{padding:10px 20px;height:auto;opacity:1;display:flex;align-items:center}
+.metismenu-container .metismenu-container .metismenu-item > .metismenu-link i.metismenu-icon{display:block;width:4px;height:4px;background:#3a3a5d;margin:0px 10px;border-radius:4px;position:relative;top:0px;left:0px}
+
+.metismenu-container .metismenu-container .metismenu-item > .metismenu-link:hover i.metismenu-icon{background:#fff}
+.metismenu-container .metismenu-container .metismenu-item > .metismenu-link.active i.metismenu-icon{background:#fff}
+
+.metismenu-container .metismenu-container{max-height:0px;overflow:hidden;transition:max-height 400ms cubic-bezier(0.19, 1, 0.22, 1)}
+.metismenu-container .metismenu-container.visible{max-height:360px;transition:max-height 200ms cubic-bezier(0.95, 0.05, 0.795, 0.035)}
+
+/**/
+
+$metisBackground: rgba(255,255,255, 0.076);
+
+.metismenu > ul.metismenu-container > li.metismenu-item:nth-child(2){background:$metisBackground;height:1px;margin:1px 0px}
+.metismenu > ul.metismenu-container > li.metismenu-item:nth-child(2) a{display:none}
+
+.metismenu > ul.metismenu-container > li.metismenu-item:nth-child(4){background:$metisBackground;height:1px;margin:1px 0px}
+.metismenu > ul.metismenu-container > li.metismenu-item:nth-child(4) a{display:none}
+
+.metismenu > ul.metismenu-container > li.metismenu-item:nth-child(6){background:$metisBackground;height:1px;margin:1px 0px}
+.metismenu > ul.metismenu-container > li.metismenu-item:nth-child(6) a{display:none}
+
+.metismenu > ul.metismenu-container > li.metismenu-item:nth-child(8){background:$metisBackground;height:1px;margin:1px 0px}
+.metismenu > ul.metismenu-container > li.metismenu-item:nth-child(8) a{display:none}

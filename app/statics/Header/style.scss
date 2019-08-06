@@ -1,0 +1,135 @@
+@import '../../styles/variables.scss';
+
+header{height:56px;background:$headerBlack;display:flex;justify-content:space-between;padding:0px $space;align-items:center}
+
+.sidebarHamburger{background:$activeBlue;height:32px;width:36px;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer;transition:all 0.3s;position:relative;left:0px;margin-right:$space}
+.sidebarHamburger i{display:block;width:20px;height:2px;background:#fff;transition:all 0.3s}
+.sidebarHamburger i:first-child{width:12px;margin-right:auto;margin-left:8px}
+.sidebarHamburger i:not(:first-child){margin-top:4px}
+.sidebarHamburger:hover i:first-child{width:20px}
+
+.headerTitle{font:normal 400 15px 'Poppins';color:#fff}
+
+.headerRight{margin-left:auto;height:100%;display:flex}
+.headerItem{position:relative}
+.headerItem:not(:first-child){margin-left:2px}
+
+.headerIconWrap{display:flex;align-items:center;justify-content:center;padding:0px 16px;transition:all 0.3s;cursor:pointer;height:100%}
+.headerIconWrap i, .headerIconWrap svg{color:#c7c5d8;font-size:17px;transition:all 0.3s}
+.headerIconWrap:hover{background:#272534}
+
+.notification{background:$activeBlue;font:normal 400 8px 'Poppins';color:#fff;padding:2px 6px;border-radius:100%;position:absolute;top:10px;left:25px}
+
+/* Açılır Header Item */
+
+.headerItemDropDown{z-index:10;position:absolute;top:100%;right:0px;opacity:0;transform:translateY(40px);pointer-events:none;transition:all 0.3s}
+.headerItemDropDown.active{opacity:1;pointer-events:auto;transform:translateY(0px)}
+
+/* Arama */
+
+.searchBox{background:rgba(32, 32, 43, 0.88);width:64px;height:64px;position:fixed;top:50%;left:50%;transition:all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);z-index:99;pointer-events:none;opacity:0;border-radius:50%;perspective:1000px;margin-left:-32px;margin-top:-32px}
+.searchBox.active{transform:translate3d(-50%, -50%, 0) scale(32);margin-left:0px;margin-top:0px;opacity:1;pointer-events:auto}
+
+.searchForm{width:100vw;position:fixed;top:0px;left:0px;z-index:100;opacity:0;pointer-events:none;height:100vh;transition:all 0.6s;display:flex;justify-content:center;align-items:center}
+.searchBox.active + .searchForm{opacity:1;pointer-events:auto}
+
+.searchForm form{position:relative;transform:translateY(-100px);transition:all 0.6s}
+.searchBox.active + .searchForm form{transform:translateY(0px)}
+.searchForm input{border:4px solid #fff;border-radius:8px;width:500px;height:90px;background:transparent;font:normal  400 36px 'Poppins';color:#fff;padding:0px 76px 0px 24px;background:rgba(32, 32, 43, 0.58)}
+.searchForm input::placeholder{color:rgba(255,255,255, 0.28)}
+
+.searchClose{height:48px;position:absolute;top:21px;right:34px;display:flex;align-items:center;cursor:pointer}
+.searchClose i, .searchClose svg{font-size:36px;color:rgba(255,255,255, 0.28);width:auto;transition:all 0.3s}
+
+.searchClose:hover i, .searchClose:hover svg{color:#fff}
+
+/* Bildirimler */
+
+.bildirimlerPaneli, .ayarlarPaneli{width:320px;background:#fff;box-shadow:0px 0px 50px 0px rgba(82,63,105, 0.32)}
+.bildirimlerTitle, .ayarlarPaneliTitle{background:#f9fafe;padding:$space;font:normal 500 16px 'Poppins';color:$colorBlack;border-bottom:3px solid #e3ebfd}
+
+/* Bildirimler Listesi */
+
+ul.headerListItem li a{border-top:1px solid #f7f8fa;display:flex;padding:$space 0px;background:#fff;transition:all 0.3s}
+ul.headerListItem li:first-child a{border-top:none}
+
+.listItemIcon{width:34px;margin-left:$space;display:flex;align-items:center}
+.listItemIcon i, .listItemIcon svg{font-size:17px;color:#1dc9b7}
+
+.listItemText{display:flex;flex-direction:column;flex:1;margin-right:14px}
+.listItemText b{font:normal 400 13px 'Poppins';color:#595d6e;transition:all 0.3s}
+.listItemText em{font:normal 300 11px 'Poppins';color:#74788d}
+
+.listItemArrow{margin-right:$space;display:flex;align-items:center;position:relative;transition:all 0.3s;left:0px}
+.listItemArrow i, .listItemArrow svg{width:auto;font-size:15px;color:#1dc9b7}
+
+ul.headerListItem li a:hover{background:#f7f8fa}
+ul.headerListItem li a:hover .listItemText b{color:$activeBlue}
+ul.headerListItem li a:hover .listItemArrow{left:4px}
+
+/* Ayarlar */
+
+.ayarlarPaneli ul{display:flex;flex-wrap:wrap}
+.ayarlarPaneli ul li a{display:block;width:160px;height:160px;display:flex;flex-direction:column;justify-content:center;align-items:center;border-left:1px solid #ebedf2;border-top:1px solid #ebedf2;padding:$space;transition:all 0.3s}
+.ayarlarPaneli ul li:nth-child(odd) a{border-left:none}
+.ayarlarPaneli ul li:nth-child(1) a, .ayarlarPaneli ul li:nth-child(2) a{border-top:none}
+
+.ayarIcon i, .ayarIcon svg{font-size:24px;color:#1dc9b7}
+
+.ayarlarPaneli ul li a b{font:normal 400 15px 'Poppins';color:#595d6e;text-align:center;margin-top:10px;transition:all 0.3s}
+
+.ayarlarPaneli ul li a:hover{background:#f7f8fa}
+.ayarlarPaneli ul li a:hover b{color:$activeBlue}
+
+/* Dil */
+
+.langFlag{width:28px;height:20px;background-repeat:no-repeat;background-size:contain;background-position:center center}
+.langFlag.tr{background-image:url('img/tr.png')}
+.langFlag.en{background-image:url('img/en.png')}
+.langFlag.de{background-image:url('img/de.png')}
+
+.headerFlagDropDown{z-index:10;width:172px;box-shadow:0px 0px 50px 0px rgba(82,63,105, 0.32);background:#fff;position:absolute;top:100%;right:0px;cursor:auto;transform:translateY(40px);opacity:0;pointer-events:none;transition:all 0.3s}
+.headerFlagDropDown.active{transform:translateY(0px);opacity:1;pointer-events:auto}
+.headerFlagDropDown ul{display:flex;flex-direction:column;padding:$space 0px}
+.headerFlagDropDown ul li a{display:block;display:flex;padding:8px $space;transition:all 0.3s}
+
+.headerFlagDropDownFlag{width:40px;display:flex;align-items:center}
+.headerFlagDropDownFlag i, .headerFlagDropDownFlag svg{color:#a2a5b9;font-size:15px;transition:all 0.3s}
+.headerFlagDropDownYazi{font:normal 400 13px 'Poppins';color:#595d6e;transition:all 0.3s}
+
+.headerFlagDropDown ul li a:hover{background:#f7f8fa}
+.headerFlagDropDown ul li a:hover .headerFlagDropDownYazi, .headerFlagDropDown ul li a:hover .headerFlagDropDownFlag i, .headerFlagDropDown ul li a:hover .headerFlagDropDownFlag svg{color:#5d78ff}
+
+/* Kullanıcı */
+
+.headerUser{position:relative}
+.headerUserWrap{display:flex;padding:0px 16px;cursor:pointer;align-items:center;height:100%;transition:all 0.3s}
+.headerUserWrap img{width:32px;height:32px;object-fit:contain;object-position:center center;border-radius:32px}
+
+.userInfo{display:flex;flex-direction:column;margin-left:10px}
+.userInfo em{font:normal 400 11px 'Poppins';color:#888597;transition:all 0.3s}
+
+.headerUserWrap:hover{background:#272534}
+.headerUserWrap:hover .userInfo em{color:#fff}
+
+.headerUserDropDown{box-shadow:0px 0px 50px 0px rgba(82,63,105, 0.32);background:#fff;width:320px;position:absolute;top:100%;right:0px;transform:translateY(40px);opacity:0;pointer-events:none;transition:all 0.3s;z-index:10}
+.headerUserDropDown.active{transform:translateY(0px);opacity:1;pointer-events:auto}
+
+.userDropDownTitle{background:#f9fafe;padding:$space;border-bottom:3px solid #e3ebfd;display:flex}
+.userDropDownTitle img{width:64px;height:64px;object-fit:contain;object-position:center center}
+.userDropDownInfo{display:flex;flex-direction:column;flex:1;margin-left:$space;justify-content:center}
+.userDropDownInfo em{font:normal 400 15px 'Poppins';color:#595d6e}
+
+.headerUserDropDown ul.headerListItem li:nth-child(1) a .listItemIcon i, .headerUserDropDown ul.headerListItem li:nth-child(1) a .listItemIcon svg{color:#fd397a}
+.headerUserDropDown ul.headerListItem li:nth-child(2) a .listItemIcon i, .headerUserDropDown ul.headerListItem li:nth-child(2) a .listItemIcon svg{color:#ffb822}
+.headerUserDropDown ul.headerListItem li:nth-child(3) a .listItemIcon i, .headerUserDropDown ul.headerListItem li:nth-child(3) a .listItemIcon svg{color:#2c77f4}
+
+.headerLogout{padding:$space;border-top:3px solid #e3ebfd;background:#f9fafe}
+.logout{background:#e74c3c;border:1px solid #da4a3d;padding:6px 16px;cursor:pointer;font:normal 400 13px 'Poppins';color:#fff;display:inline-block;transition:all 0.3s}
+.logout:hover{background:#c0392b}
+
+/* Mobile */
+
+@media only screen and (max-width:620px){
+    .headerTitle{display:none}
+}

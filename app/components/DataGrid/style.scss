@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.dataGridWrapper{margin-top:10px}
+
+.react-grid-Container{width:100% !important}
+.react-grid-Main{outline:none !important}
+.react-grid-HeaderRow{width:100% !important}
+.react-grid-HeaderRow > div{width:100% !important}
+.react-grid-Canvas{width:100% !important}
+
+.react-grid-HeaderCell.react-grid-HeaderCell--frozen > div{display:none}
+
+.react-grid-Toolbar{padding:16px 10px 0px 10px !important;height:55px !important;display:flex}
+.react-grid-Toolbar .tools{position:relative;z-index:2}
+
+.react-grid-HeaderCell{font:normal 400 13px 'Poppins';font-weight:600 !important}
+.react-grid-HeaderCell input.form-control{height:28px;padding:6px 7px 5px 7px;font:normal 400 13px 'Roboto'}
+
+.react-grid-Cell{padding:0px !important}
+.react-grid-Cell__value{font:normal 400 13px 'Poppins';position:relative;top:1px}
+.react-grid-Cell__value div span div[title]{padding:0px 8px}
+
+.react-grid-checkbox:checked + .react-grid-checkbox-label:before{box-shadow:inset 0px 0px 0px 2px #fff !important;background:$activeBlue !important}
+.react-grid-checkbox-label{position:relative;top:2px}
+
+.dataGridWrapper span.badge{position:relative;top:4px}
+
+/* Butonlar */
+
+.dataGridButtons{height:34px;margin-bottom:-45px;position:relative;z-index:1;display:flex;justify-content:flex-end;margin-right:11px}
+
+.dataGridButton{padding:4px 16px;cursor:pointer;display:flex;align-items:center;background:#1abc9c;border:1px solid #16a085;border-right-width:0px;transition:all 0.3s}
+.dataGridButton span i, .dataGridButton span svg{width:auto;font-size:15px;color:#fff}
+.dataGridButton b{color:#fff;font:normal 400 13px 'Poppins';margin-left:10px;position:relative;top:1px}
+.dataGridButton:last-child{border-right-width:1px}
+.dataGridButton:hover{background:#14a286}
+
+/* State */
+
+.dataGridState{padding:7px 8px 6px 8px;position:relative;top:-1px}
+.dataGridState.BEKLEMEDE{background:#FFF8EB;color:#ffb822}
+.dataGridState.IPTAL{background:#FFECF2;color:#fd397a}
+.dataGridState.KABUL{background:#ECFAF1;color:#0abb87}

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "baseUrl": ".",
+    "lib": ["es6", "dom"],
+    "allowJs":true
+  },
+  "include": [
+    "./**/*"
+  ]
+}

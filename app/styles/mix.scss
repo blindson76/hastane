@@ -1,0 +1,76 @@
+/* Genel İskelet */
+
+.wrapper:after{content:'';display:block;clear:both}
+.sidebar{width:$sidebarWidth;background:$headerBlack;position:absolute;transition:all 0.3s;z-index:2;left:0px;top:0px}
+.sidebar:before{content:'';position:fixed;top:0px;left:0px;width:$sidebarWidth;height:100vh;background:$headerBlack;z-index:1;transition:all 0.3s}
+.content{width:calc(100% - #{$sidebarWidth});transition:all 0.3s;position:relative;z-index:2;float:right}
+
+/* Small Sidebar */
+
+.hideSidebar{left:calc( -1 * #{$sidebarWidth} )}
+.hideSidebar:before{left:calc( -1 * #{$sidebarWidth} )}
+.hideSidebar + .content{width:100%;left:0px}
+
+.sidebar.hideSidebar.tabletSidebar + .content{left:0px}
+
+.sidebar.tabletSidebar + .content{width:100%;left:200px}
+
+/* Sidebar */
+
+.sidebarLogo{position:relative;z-index:2}
+.sidebarLogo a{display:flex;flex-direction:column}
+.sidLogo{padding:$space}
+.sidLogo span{display:block;background-image:$logoPath;height:70px;background-position:center center;background-size:contain;background-repeat:no-repeat}
+
+/* Content Area */
+
+.contentArea{margin:$space}
+.contentArea h1.title{color:$colorBlack;font:normal 500 16px 'Poppins';margin:0px;margin-bottom:10px}
+
+.contentWhite{background:#fff;padding:$space;box-shadow:$shadowWhite;min-height:240px}
+p.first{font:normal 400 13px 'Poppins';color:$colorBlack}
+
+.contentTransparent{background:transparent;display:flex;flex-wrap:wrap}
+.contentTransparent .contentWhite{width:calc( (100% - 40px) / 3 );min-height:auto}
+.contentTransparent .contentWhite:not(:first-child){margin-left:$space}
+
+@media only screen and (max-width:710px){
+    .contentTransparent{flex-direction:column}
+    .contentTransparent .contentWhite{width:100%}
+    .contentTransparent .contentWhite:not(:first-child){margin-left:0px;margin-top:$space}
+}
+
+/* collapse */
+
+.myCollapse{background:#fff;padding:10px;box-shadow:$shadowWhite;display:flex;align-items:center}
+.myCollapseInfo{display:flex;flex-direction:column;align-items:flex-end;margin-right:$space}
+.myCollapseInfo em{font:normal 400 13px 'Poppins';color:#646c9a}
+.myCollapseValue{font:normal 400 13px 'Poppins';color:#fff;background:#1abc9c;padding:2px 10px;margin-top:2px}
+
+/* Animasyonlar */
+
+.animUp{animation-name:animUp;animation-duration:300ms;animation-iteration-count:1}
+@keyframes animUp{
+    0% {opacity:0;transform:translateY(160px)}
+    100% {opacity:1;transform:translateY(0)}
+}
+
+.animOpacity{animation-name:animOpacity;animation-duration:600ms;animation-iteration-count:1}
+@keyframes animOpacity{
+    0% {opacity:0}
+    100% {opacity:1}
+}
+
+/* Other */
+
+.hidden{display:none}
+.nominhe{min-height:auto}
+.mt0{margin-top:0px}
+.mt2{margin-top:2px}
+.mt10{margin-top:10px}
+.mt20{margin-top:20px}
+.mt40{margin-top:40px !important}
+
+.mb20{margin-bottom:20px}
+
+.stateView{word-break:break-all;font:normal 400 13px 'Poppins';color:$colorBlack}

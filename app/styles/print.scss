@@ -1,0 +1,140 @@
+/* Yazdırılabilir Sayfalar */
+.print{position:relative}
+
+.printTitle{font:normal 600 22px/28px 'Times New Roman';color:#000;text-align:center;margin-bottom:44px;position:relative;top:7px}
+.printLogo{width:117px;height:70px;background-image:$logoPath;background-position:center center;background-size:contain;background-repeat:no-repeat;position:absolute;top:0px;left:0px}
+
+.printArea{margin-top:$space;border:1px solid #000;border-right:none;border-bottom:none}
+.printRow{display:flex;flex-wrap:wrap}
+.printColumn{padding:10px;border:1px solid #000;border-left:none;border-top:none;font:normal 400 14px 'Times New Roman'}
+.printColumn:first-child{width:56%;font-weight:600}
+.printColumn:last-child{width:44%}
+
+.printSubTitle{font:normal 600 14px 'Times New Roman';color:#000;margin-top:$space;margin-bottom:-16px;display:flex;justify-content:space-between}
+
+.printColumn:nth-child(odd){background:#f4f4f4}
+
+/* Yaşlı Yakınlarına Ait Bilgiler */
+
+.printTable{margin-top:$space;border:1px solid #000;border-right:none;border-bottom:none}
+.printTableRow{display:flex;flex-wrap:wrap}
+.printTableColumn{padding:10px;border:1px solid #000;border-left:none;border-top:none;font:normal 400 14px 'Times New Roman'}
+
+.printTableRow:first-child .printTableColumn{font-weight:600;padding:5px 10px;background:#f4f4f4}
+
+.ftw1{width:210px}
+.ftw2{width:160px}
+.ftw4{width:260px}
+
+.flexW{flex:1}
+
+.printAuthor{display:flex;flex-direction:column;margin-top:calc( #{$space} * 2 );align-items:flex-end}
+.printAuthor b{font:normal 600 14px 'Times New Roman';color:#000}
+.printAuthor span{font:normal 400 14px 'Times New Roman';color:#000;margin-top:5px}
+
+.printFooter{text-align:center;margin-top:calc( #{$space} * 2 );font:normal 400 11px 'Roboto';color:#999}
+
+/* Sosyal Etkinlik Raporu */
+
+.printRowBigHeight .printColumn{height:140px;align-items:center;display:flex}
+
+/* İlk Kabul Muayenesi */
+
+.printHorizontal{margin-top:$space;border:1px solid #000;border-right:none;border-bottom:none}
+.printHorizontalRow{display:flex;flex-wrap:wrap}
+.printHorizontalColumn{padding:10px;border:1px solid #000;border-left:none;border-top:none;font:normal 400 14px 'Times New Roman'}
+
+.printHorizontalColumn{flex:1}
+.printHorizontalColumn:nth-child(odd){background:#f4f4f4}
+
+.dusmeRiskiSatiri .printHorizontalColumn:not(:last-child){width:90px;flex:unset}
+.ilacKullanimiSatiri .printHorizontalColumn{background:#fff}
+
+.IlkKabulMuayenesi .printHorizontalColumn{padding:6px 10px}
+
+/* Emanet Eşya Formu */
+
+.printAreaThree{margin-top:$space;border:1px solid #000;border-right:none;border-bottom:none}
+.printRowThree{display:flex;flex-wrap:wrap}
+.printColumnThree{padding:10px;border:1px solid #000;border-left:none;border-top:none;font:normal 400 14px 'Times New Roman';min-height:37px}
+.printColumnThree:nth-child(1){width:100px}
+.printColumnThree:nth-child(2){flex:1}
+.printColumnThree:nth-child(3){flex:1}
+
+.printRowThree:first-child .printColumnThree{background:#f4f4f4;font-weight:600}
+
+.printBottomThree{display:flex;align-items:flex-start;justify-content:center;margin-top:40px}
+.printBottomThreeSingle{display:flex;flex-direction:column;width:194px}
+.printBottomThreeSingle:not(:first-child){margin-left:60px}
+.printBottomThreeSingle b{font:normal 600 16px 'Times New Roman';margin-bottom:8px}
+.printBottomThreeSingle em{font:normal 400 16px 'Times New Roman';margin-top:2px}
+
+.printBottomCenter{display:flex;flex-direction:column;align-items:center;margin-top:40px}
+.printBottomCenter b{font:normal 600 16px 'Times New Roman';margin-bottom:10px}
+.printBottomCenter em{font:normal 400 16px 'Times New Roman'}
+
+.printBottomKurulusMuduru{margin-top:20px;font:normal 600 16px 'Times New Roman'}
+
+/* Kabul Uygun */
+
+.printKabulUygunBaslik{display:flex;align-items:flex-start;justify-content:center}
+.printKabulUygunBaslik b{font:normal 600 16px 'Times New Roman'}
+.printKabulUygunBaslik em{width:272px;margin-left:10px;display:flex;flex-direction:column}
+.printKabulUygunBaslik em span{font:normal 400 16px 'Times New Roman'}
+.printKabulUygunBaslik em span:not(:first-child){margin-top:10px}
+
+.printKabulUygunMetin{margin-top:40px}
+.printKabulUygunMetin p{font:normal 400 16px 'Times New Roman'}
+.printKabulUygunMetin p:not(:first-child){margin-top:15px}
+
+.printRight{margin-top:40px;display:flex;flex-direction:column;align-items:flex-end}
+.printRight em{font:normal 400 16px 'Times New Roman'}
+.printRight b{font:normal 600 16px 'Times New Roman';margin-top:20px}
+
+/* Aylık Kabul Edilen Yaşlı Listesi */
+
+.pirntYasliListesi{margin-top:$space;border:1px solid #000;border-right:none;border-bottom:none}
+.printYasliListesiRow{display:flex;flex-wrap:wrap}
+
+.printYasliListesiColumn{padding:10px;border:1px solid #000;border-left:none;border-top:none;font:normal 400 12px 'Times New Roman';display:flex;text-align:center;justify-content:center;align-items:center}
+.printYasliListesiColumn:nth-child(1){width:50px}
+.printYasliListesiColumn:nth-child(2){flex:1;text-align:left;justify-content:normal}
+.printYasliListesiColumn:nth-child(3){width:76px}
+.printYasliListesiColumn:nth-child(4){width:150px}
+.printYasliListesiColumn:nth-child(5){width:80px}
+.printYasliListesiColumn:nth-child(6){width:100px}
+
+.printYasliListesiColumn:nth-child(7){width:160px;display:flex;flex-direction:column;padding:0px;align-items:normal}
+.printYasliListesiColumn span{flex:1;display:flex;justify-content:space-between;text-align:center}
+.printYasliListesiColumn span:not(:first-child){border-top:1px solid #000}
+.printYasliListesiColumn span em{font-style:normal;flex:1;display:flex;align-items:center;justify-content:center;text-align:center}
+.printYasliListesiColumn span em:not(:first-child){border-left:1px solid #000}
+
+.printYasliListesiColumn:nth-child(8){width:100px}
+.printYasliListesiColumn:nth-child(9){width:100px}
+
+.printYasliListesiRow:first-child .printYasliListesiColumn{background:#f4f4f4;font-weight:600}
+
+.printBottomTwo{display:flex;align-items:flex-start;justify-content:space-between;margin-top:40px}
+.printBottomTwoSingle{display:flex;flex-direction:column}
+.printBottomTwoSingle:not(:first-child){margin-left:60px}
+.printBottomTwoSingle b{font:normal 600 16px 'Times New Roman';margin-bottom:8px}
+.printBottomTwoSingle em{font:normal 400 16px 'Times New Roman';margin-top:2px}
+.printBottomTwoSingleB{font:normal 600 16px 'Times New Roman';margin-top:10px}
+
+.printBottomTwo .printBottomTwoSingle:last-child{align-items:flex-end}
+
+/* Yoklama */
+
+.yoklama{margin-top:$space;border:1px solid #000;border-right:none;border-bottom:none}
+.yoklamaRow{display:flex;flex-wrap:wrap}
+
+.yoklamaColumn{padding:5px;border:1px solid #000;border-left:none;border-top:none;font:normal 400 12px 'Times New Roman';width:26px}
+.yoklamaColumn:nth-child(1){width:62px}
+.yoklamaColumn:nth-child(2){flex:1}
+
+.yoklamaRow:first-child .yoklamaColumn{font-weight:600;background:#f4f4f4}
+
+.yoklamaFooter .yoklamaRow:first-child .yoklamaColumn{font-weight:400;background:#fff}
+.yoklamaFooter .yoklamaColumn:nth-child(1){flex:1;font-weight:600 !important;background:#f4f4f4 !important}
+.yoklamaFooter .yoklamaColumn:nth-child(2){flex:unset}
