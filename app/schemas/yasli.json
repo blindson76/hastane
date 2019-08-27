@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "properties": {
+      "adi": {
+        "type": "string",
+        "description": "Adı",
+        "maxLength": 100,
+        "pattern": "\\w+"
+      },
+      "soyadi": {
+        "type": "string",
+        "description": "Soyadi"
+      },
+      "dogumYeri": {
+        "type": "string",
+        "description": "Doğum Yeri"
+      },
+      "dogumTarihi": {
+        "type": "string",
+        "description": "Doğum Tarihi",
+        "format": "date"
+      },
+      "tcKimlikNo": {
+        "type": "string",
+        "description": "TC Kimlik No",
+        "minLength": 11,
+        "maxLength": 11,
+        "pattern": "\\d{11}"
+      },
+      "cinsiyet": {
+        "type": "string",
+        "enum": [
+          "ERKEK",
+          "KADIN"
+        ],
+        "description": "Cinsiyet"
+      },
+      "medeniDurum": {
+        "type": "string",
+        "description": "Medeni Durum",
+        "enum": [
+          "EVLİ",
+          "BEKAR",
+          "DUL"
+        ]
+      },
+      "SosyalGuvenlikKurulusu": {
+        "type": "string",
+        "description": "Sosyal Güvenlik Kuruluşu",
+        "enum": [
+          "SGK"
+        ]
+      }
+    },
+    "description": "Person",
+    "required": [
+      "adi",
+      "soyadi",
+      "dogumYeri",
+      "dogumTarihi",
+      "tcKimlikNo",
+      "cinsiyet",
+      "medeniDurum",
+      "SosyalGuvenlikKurulusu"
+    ]
+  }

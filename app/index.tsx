@@ -18,6 +18,7 @@ import OnGorusmeOlustur from './pages/OnGorusmeOlustur/OnGorusmeOlustur';
 import OnGorusmeler from './pages/OnGorusmeler/OnGorusmeler';
 
 import BosSayfa from './pages/BosSayfa/BosSayfa';
+import YasliKabul from "./forms/print/YasliKabul";
 
 /* STYLES */
 import "./styles/main.scss";
@@ -25,6 +26,7 @@ import "./styles/main.scss";
 /* REDUX */
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import PSDurumSaptama from './forms/print/PSDurumSaptama';
 
 const initialState = {
 	hideSidebar: false,
@@ -70,6 +72,7 @@ ReactDOM.render((
 							<Route path="/yeni-on-gorusme-olustur" component={OnGorusmeOlustur} />
 							<Route path="/on-gorusmeler" component={OnGorusmeler} />
 							<Route path="/bos-sayfa" component={BosSayfa} />
+							<Route path="/deneme" component={PSDurumSaptama} />
 
 						</div>
 					</div>

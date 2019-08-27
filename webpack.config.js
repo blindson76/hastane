@@ -9,12 +9,12 @@ const paths = {
     root: appRoot.path,
     app: path.join(appRoot.path,"/app"),
     build: path.join(appRoot.path,"/build"),
+    assets:path.join(appRoot.path,'/assets'),
     node_modules: path.join(appRoot.path,"/node_modules")
 };
-
 const webpackConf = {
-    context: paths.app,
-    entry: "./index.tsx",
+    //context: paths.app,
+    entry: "./app/index.tsx",
     output: {
         filename: "bundle.js",
         path: __dirname + "/dist"
@@ -25,8 +25,14 @@ const webpackConf = {
 
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: [".ts", ".tsx", ".js", ".json"],
-        modules: [paths.app, paths.node_modules]
+        extensions: [".ts", ".tsx", ".js", ".json",".png"],
+        modules: [paths.app, paths.node_modules,paths.assets],
+
+        alias: {
+            Utilities: path.resolve(__dirname, 'src/utilities/'),
+            Services: path.resolve(appRoot.path,'/app/functions/'),
+            Assets:path.resolve(__dirname,'assets')
+          }
     },
 
     module: {
@@ -72,13 +78,24 @@ const webpackConf = {
                         }
                     ]
                 })
-            }
+            },
+            {
+                test: /\.(png|jpg|gif)$/i,
+                use: [
+                  {
+                    loader: 'url-loader',
+                    options: {
+                      //limit: 8192,
+                    },
+                  },
+                ],
+              }
         ]
     },
     plugins:[
         new CopyWebpackPlugin([
             {
-                from: "../assets"
+                from: "./assets"
             }
         ]),
         new ExtractTextPlugin("styles.css")

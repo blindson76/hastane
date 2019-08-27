@@ -20,6 +20,7 @@
     "@types/react-dom": "^16.0.9",
     "@types/reactstrap": "^6.4.2",
     "bootstrap": "^4.1.3",
+    "core-js": "^2.6.8",
     "cron-builder": "^0.3.0",
     "crypto-js": "^3.1.9-1",
     "fullcalendar-reactwrapper": "^1.0.7",
@@ -37,6 +38,7 @@
     "react-dom": "^16.6.0",
     "react-input-mask": "^2.0.4",
     "react-json-view": "^1.16.6",
+    "react-jsonschema-form": "^1.7.0",
     "react-metismenu": "^1.4.0",
     "react-redux": "^7.1.0",
     "react-to-print": "^2.1.3",
@@ -51,14 +53,18 @@
     "css-loader": "^0.28.9",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.9",
+    "immutability-helper": "^3.0.1",
+    "lodash": "^4.17.15",
     "node-sass": "^4.12.0",
+    "pdfmake": "^0.1.58",
+    "print-js": "^1.0.61",
     "sass-loader": "^6.0.7",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.20.1",
     "typescript": "^3.1.3",
-    "url-loader": "^1.0.1",
+    "url-loader": "^1.1.2",
     "webpack": "^3.12.0",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack-dev-server": "^2.11.5"
   }
 }
