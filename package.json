@@ -54,7 +54,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.9",
     "immutability-helper": "^3.0.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "node-sass": "^4.12.0",
     "pdfmake": "^0.1.58",
     "print-js": "^1.0.61",
