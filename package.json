@@ -55,7 +55,7 @@
     "file-loader": "^1.1.9",
     "immutability-helper": "^3.0.1",
     "lodash": "^4.17.15",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "pdfmake": "^0.1.58",
     "print-js": "^1.0.61",
     "sass-loader": "^6.0.7",
